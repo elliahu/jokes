@@ -114,11 +114,16 @@ window.onload = (e) => {
         var url = new URL(finalURL);
 
         url.searchParams.append('lang', lang);
-        url.searchParams.append('blacklistFlags', blacklist.toString());
-        url.searchParams.append('amount', number);
-        url.searchParams.append('contains', search);
+        
+        if(blacklist.length > 0)
+            url.searchParams.append('blacklistFlags', blacklist.toString());
 
-        if (type.length != 2)
+        url.searchParams.append('amount', number);
+
+        if(search.length > 0)
+            url.searchParams.append('contains', search);
+
+        if (type.length != 2 && type.length != 0)
             url.searchParams.append('type', type.toString());
 
         console.log(url.toString());
