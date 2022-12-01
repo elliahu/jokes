@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^4.0.1"
+    "chart.js": "^4.0.1",
+    "uikit": "^3.15.14"
   }
 }

@@ -1,4 +1,6 @@
 import '/node_modules/chart.js/dist/chart.umd.js';
+import '/node_modules/uikit/dist/js/uikit.min.js';
+import '/node_modules/uikit/dist/js/uikit-icons.min.js';
 
 if (!localStorage.getItem('favorite')) {
     const favorite = {
@@ -114,7 +116,7 @@ window.onload = (e) => {
         var url = new URL(finalURL);
 
         url.searchParams.append('lang', lang);
-        
+
         if(blacklist.length > 0)
             url.searchParams.append('blacklistFlags', blacklist.toString());
 
